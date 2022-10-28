@@ -6,7 +6,7 @@
   <link href="http://maxwell297.github.io/atom.xml" rel="self"/>
   
   <link href="http://maxwell297.github.io/"/>
-  <updated>2022-10-28T03:16:34.095Z</updated>
+  <updated>2022-10-28T17:31:06.040Z</updated>
   <id>http://maxwell297.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>QCC lecture1</title>
+    <link href="http://maxwell297.github.io/qcc-lecture1/"/>
+    <id>http://maxwell297.github.io/qcc-lecture1/</id>
+    <published>2022-10-28T17:04:53.000Z</published>
+    <updated>2022-10-28T17:31:06.040Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;量子通讯与密码&quot;&gt;&lt;a href=&quot;#量子通讯与密码&quot; class=&quot;headerlink&quot; title=&quot;量子通讯与密码&quot;&gt;&lt;/a&gt;量子通讯与密码&lt;/h1&gt;&lt;h2 id=&quot;Lecture-1&quot;&gt;&lt;a href=&quot;#Lecture-1&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Quantum Computation &amp; Cryptography" scheme="http://maxwell297.github.io/categories/Quantum-Computation-Cryptography/"/>
+    
+    
+    <category term="CS" scheme="http://maxwell297.github.io/tags/CS/"/>
+    
+    <category term="Quantum" scheme="http://maxwell297.github.io/tags/Quantum/"/>
+    
+  </entry>
   
   <entry>
     <title>Hello World</title>
