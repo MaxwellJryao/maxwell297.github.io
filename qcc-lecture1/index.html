@@ -59,9 +59,9 @@
 
     <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
 
-<meta name="generator" content="Hexo 6.3.0">
+<meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="Maxwellyao" type="application/atom+xml">
+
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
-<link rel="alternate" href="/atom.xml" title="Maxwellyao" type="application/atom+xml">
 </head>
 
 
@@ -416,7 +416,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    594
+                    596
                 </div>
                 
 
@@ -441,141 +441,94 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="量子通讯与密码"><a href="#量子通讯与密码" class="headerlink" title="量子通讯与密码"></a>量子通讯与密码</h1><h2 id="Lecture-1"><a href="#Lecture-1" class="headerlink" title="Lecture 1"></a>Lecture 1</h2><ul>
-<li><p>Bra-ket notation</p>
+                <h1 id="量子通讯与密码">量子通讯与密码</h1>
+<h2 id="lecture-1">Lecture 1</h2>
 <ul>
+<li><p>Bra-ket notation</p></li>
 <li>Ket - column vector, bra - row vector</li>
-<li>$&lt;\psi|=|\psi&gt;^{+}$</li>
+<li><p><span class="math inline">\(&lt;\psi|=|\psi&gt;^{+}\)</span></p></li>
+<li><p>Hilbert space</p></li>
 </ul>
-</li>
-<li><p>Hilbert space</p>
-<ol>
-<li>$&lt;\psi|\psi&gt; &gt;0$ for all $|\psi&gt;\ne 0$</li>
-<li>$&lt;\phi|(a|\psi_1&gt;+b|\psi_2&gt;)=a&lt;\phi|\psi_1&gt;+b&lt;\phi|\psi_2&gt;$</li>
-<li>$&lt;\phi|\psi&gt;=&lt;\psi|\phi&gt;^*$</li>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(&lt;\psi|\psi&gt; &gt;0\)</span> for all <span class="math inline">\(|\psi&gt;\ne 0\)</span></li>
+<li><span class="math inline">\(&lt;\phi|(a|\psi_1&gt;+b|\psi_2&gt;)=a&lt;\phi|\psi_1&gt;+b&lt;\phi|\psi_2&gt;\)</span></li>
+<li><span class="math inline">\(&lt;\phi|\psi&gt;=&lt;\psi|\phi&gt;^*\)</span></li>
 </ol>
-</li>
-<li><p>Ray</p>
 <ul>
-<li>If $&lt;\psi|\psi&gt;=1$, then $|\psi&gt;$ is called a ray</li>
-<li>In quantum mechanics, if $a\ne 0$, then $a|\psi&gt;, |\psi&gt;$ represent the same state(the overall phase doesn’t matter)</li>
-<li>However, note that $e^{i\theta}|\psi&gt;+|\phi&gt;\ne|\psi&gt;+|\phi&gt;$, where $e^{i\theta}$ is the relative phase</li>
-</ul>
-</li>
-<li><p>State($|\psi&gt;$)</p>
+<li><p>Ray</p></li>
+<li>If <span class="math inline">\(&lt;\psi|\psi&gt;=1\)</span>, then <span class="math inline">\(|\psi&gt;\)</span> is called a ray</li>
+<li>In quantum mechanics, if <span class="math inline">\(a\ne 0\)</span>, then <span class="math inline">\(a|\psi&gt;, |\psi&gt;\)</span> represent the same state(the overall phase doesn't matter)</li>
+<li><p>However, note that <span class="math inline">\(e^{i\theta}|\psi&gt;+|\phi&gt;\ne|\psi&gt;+|\phi&gt;\)</span>, where <span class="math inline">\(e^{i\theta}\)</span> is the relative phase</p></li>
+<li><p>State(<span class="math inline">\(|\psi&gt;\)</span>)</p></li>
+<li><p>A complete description of a system</p></li>
+<li><p>Spin-<span class="math inline">\(\frac 12\)</span></p></li>
+<li><span class="math inline">\(|0&gt;\)</span>-up, <span class="math inline">\(|1&gt;\)</span>-down</li>
+<li><p>spin-1: H-<span class="math inline">\(|0&gt;\)</span>, V-<span class="math inline">\(|1&gt;\)</span> (<em>relation between spin-1 &amp; spin-<span class="math inline">\(\frac 12\)</span></em>)</p></li>
+<li><p>Born's rule</p></li>
+<li><span class="math inline">\(|\psi&gt;=a|0&gt;+b|1&gt;\)</span>, then the possibility to get
 <ul>
-<li>A complete description of a system</li>
-</ul>
-</li>
-<li><p>Spin-$\frac 12$</p>
+<li><span class="math inline">\(|0&gt;:\frac{a^2}{a^2+b^2}\)</span></li>
+<li><span class="math inline">\(|1&gt;:\frac{b^2}{a^2+b^2}\)</span></li>
+</ul></li>
+<li><p>Qudit</p></li>
+<li><span class="math inline">\(|\psi&gt;=\sum_0^{d-1}c_i|i&gt;\)</span></li>
+<li>Number of real variable parameters: <span class="math inline">\(2d-2\)</span>
 <ul>
-<li>$|0&gt;$-up, $|1&gt;$-down</li>
-<li>spin-1: H-$|0&gt;$, V-$|1&gt;$ (<em>relation between spin-1 &amp; spin-$\frac 12$</em>)</li>
-</ul>
-</li>
-<li><p>Born’s rule</p>
-<ul>
-<li>$|\psi&gt;=a|0&gt;+b|1&gt;$, then the possibility to get<ul>
-<li>$|0&gt;:\frac{a^2}{a^2+b^2}$</li>
-<li>$|1&gt;:\frac{b^2}{a^2+b^2}$</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>Qudit</p>
-<ul>
-<li>$|\psi&gt;=\sum_0^{d-1}c_i|i&gt;$</li>
-<li>Number of real variable parameters: $2d-2$ <ul>
 <li>Global phase</li>
 <li>Normalization</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>Density matrix</p>
-<ul>
-<li><p>$\rho\equiv|\phi&gt;&lt;\phi|$, is a $d\times d$ matrix(where $|\phi&gt;$ is required to be normalized)</p>
-</li>
-<li><p>For qubit, $\rho=\begin{pmatrix}|a|^2 &amp; ab^<em>\ a^</em>b &amp; |b|^2\end{pmatrix}$</p>
-</li>
+</ul></li>
+<li><p>Density matrix</p></li>
+<li><p><span class="math inline">\(\rho\equiv|\phi&gt;&lt;\phi|\)</span>, is a <span class="math inline">\(d\times d\)</span> matrix(where <span class="math inline">\(|\phi&gt;\)</span> is required to be normalized)</p></li>
+<li><p>For qubit, <span class="math inline">\(\rho=\begin{pmatrix}|a|^2 &amp; ab^*\\ a^*b &amp; |b|^2\end{pmatrix}\)</span></p></li>
 <li><p>Properties</p>
-<ol>
-<li><p>$\rho^+=\rho$</p>
-</li>
-<li><p>tr($\rho$) = 1</p>
-</li>
-<li><p>$\rho\ge0$</p>
-</li>
-<li><p>1 $\rho^2=\rho$(equivalent to 4. 2 tr$(\rho^2)=1$)</p>
-</li>
-</ol>
-</li>
-<li><p>Use unitary normalization to use {1,2,3,4.2} to prove the form of $\rho=|\phi&gt;&lt;\phi|$</p>
-</li>
-</ul>
-</li>
-<li><p>For qubit</p>
+<ol style="list-style-type: decimal">
+<li><p><span class="math inline">\(\rho^+=\rho\)</span></p></li>
+<li><p>tr(<span class="math inline">\(\rho\)</span>) = 1</p></li>
+<li><p><span class="math inline">\(\rho\ge0\)</span></p></li>
+<li><p>1 <span class="math inline">\(\rho^2=\rho\)</span>(equivalent to 4. 2 tr<span class="math inline">\((\rho^2)=1\)</span>)</p></li>
+</ol></li>
+<li><p>Use unitary normalization to use {1,2,3,4.2} to prove the form of <span class="math inline">\(\rho=|\phi&gt;&lt;\phi|\)</span></p></li>
+<li><p>For qubit</p></li>
+<li><p><span class="math inline">\(|\psi&gt;=a|0&gt;+b|1&gt;=cos\frac \theta 2|0&gt;+e^{i\phi}sin\frac \theta 2|1&gt;\)</span> on the Bloch sphere</p>
+<img src="/qcc-lecture1/image-1.png" class="" title="Bloch Sphere">
 <ul>
-<li><p>$|\psi&gt;=a|0&gt;+b|1&gt;=cos\frac \theta 2|0&gt;+e^{i\phi}sin\frac \theta 2|1&gt;$ on the Bloch sphere</p>
-<p><img src="/QCC-lecture1/image-1.png" alt="Bloch Sphere"></p>
-<ul>
-<li>$|+y&gt;=|+i&gt;,|-y&gt;=|-i&gt;$</li>
-</ul>
-</li>
+<li><span class="math inline">\(|+y&gt;=|+i&gt;,|-y&gt;=|-i&gt;\)</span></li>
+</ul></li>
 <li><p>The meaning of 3 coordinates</p>
-<p>Z: $cos \theta=cos^2\frac \theta 2-sin^2\frac \theta 2=Pr(Z=1)-Pr(Z=-1)=&lt;\sigma_z&gt;$</p>
-<p>X: $&lt;\sigma_x&gt;$, Y: $&lt;\sigma_y&gt;$</p>
-</li>
-</ul>
-</li>
-<li><p>Orthogonal states in Bloch sphere</p>
-<ul>
-<li><p>$(x_1,y_1,z_1),(x_2,y_2,z_2)$ opposite orientation </p>
-</li>
+<p>Z: <span class="math inline">\(cos \theta=cos^2\frac \theta 2-sin^2\frac \theta 2=Pr(Z=1)-Pr(Z=-1)=&lt;\sigma_z&gt;\)</span></p>
+<p>X: <span class="math inline">\(&lt;\sigma_x&gt;\)</span>, Y: <span class="math inline">\(&lt;\sigma_y&gt;\)</span></p></li>
+<li><p>Orthogonal states in Bloch sphere</p></li>
+<li><p><span class="math inline">\((x_1,y_1,z_1),(x_2,y_2,z_2)\)</span> opposite orientation</p></li>
 <li><p>Bases</p>
-<p>$\mathcal Z={|0&gt;,|1&gt;}, \mathcal X = {|+&gt;,|-&gt;},\mathcal Y={|+i&gt;,|-i&gt;}$</p>
-</li>
+<p><span class="math inline">\(\mathcal Z=\{|0&gt;,|1&gt;\}, \mathcal X = \{|+&gt;,|-&gt;\},\mathcal Y=\{|+i&gt;,|-i&gt;\}\)</span></p></li>
+<li><p>Pauli matrix</p></li>
 </ul>
-</li>
-<li><p>Pauli matrix</p>
-<p><img src="/QCC-lecture1/image-2.png" alt="Pauli matrices"></p>
-<p>and $\sigma_0=I$ (<em>relation between Pauli matrix and the XYZ coordinates</em>)</p>
+<p><img src="/qcc-lecture1/image-2.png" class="" title="Pauli matrices"></p>
+<p>and <span class="math inline">\(\sigma_0=I\)</span> (<em>relation between Pauli matrix and the XYZ coordinates</em>)</p>
 <ul>
 <li><p>Eigenvectors and eigenvalues</p>
-<p>$\sigma_x-|+&gt;,|-&gt;$, $\sigma_y-|+i&gt;,|-i&gt;$, $\sigma_z-|0&gt;,|1&gt;$</p>
-</li>
-<li><p>Mutually unbiased states(MUB: $X,Y,Z$)</p>
-<p>$|&lt;0|+&gt;|^2=\frac 12$</p>
-</li>
-<li><p>In MUB, for 2 bases ${|\psi_i&gt;}<em>{i\in[d]},{|\phi_i&gt;}</em>{j\in[d]}$</p>
-<p>$\forall i,j, |&lt;\psi_i|\phi_j&gt;|^2=\frac 1d$.</p>
+<p><span class="math inline">\(\sigma_x-|+&gt;,|-&gt;\)</span>, <span class="math inline">\(\sigma_y-|+i&gt;,|-i&gt;\)</span>, <span class="math inline">\(\sigma_z-|0&gt;,|1&gt;\)</span></p></li>
+<li><p>Mutually unbiased states(MUB: <span class="math inline">\(X,Y,Z\)</span>)</p>
+<p><span class="math inline">\(|&lt;0|+&gt;|^2=\frac 12\)</span></p></li>
+<li><p>In MUB, for 2 bases <span class="math inline">\(\{|\psi_i&gt;\}_{i\in[d]},\{|\phi_i&gt;\}_{j\in[d]}\)</span></p>
+<p><span class="math inline">\(\forall i,j, |&lt;\psi_i|\phi_j&gt;|^2=\frac 1d\)</span>.</p>
 <p>If d is prime or prime power, d+1 MUB (<em>why only one MUB for d=3</em>)</p>
-<p>For any d, the number of MUB is no more than d+1, no less than 3</p>
-</li>
-</ul>
-</li>
-<li><p>Observable and Measurement</p>
-<ul>
+<p>For any d, the number of MUB is no more than d+1, no less than 3</p></li>
+<li><p>Observable and Measurement</p></li>
 <li><p>In Q.M., an observable is a self-adjoint operator</p>
-<ol>
-<li><p>Linear</p>
-</li>
-<li><p>Adjoint</p>
-<p>$&lt;\psi|A\phi&gt;=&lt;A^+\psi|\phi&gt;$</p>
-</li>
-<li><p>Projectors (for non-degenerate cases)</p>
-<p>$E_i=|\psi_i&gt;&lt;\psi_i|$, and $E_iE_j=\delta_{ij}E_i$, we can write</p>
-<p>$A=\sum_ia_i|i&gt;&lt;i|$</p>
-</li>
+<ol style="list-style-type: decimal">
+<li><p>Linear</p></li>
+<li><p>Adjoint</p></li>
 </ol>
-</li>
-<li><p>When we measure an observable A, we’ll get $a_i$ with probability $|&lt;\psi|\phi_i&gt;|^2=&lt;\psi|E_i|\psi&gt;=tr(E_i|\psi&gt;&lt;\psi|)$, the average outcome is </p>
-<p>$&lt; a &gt;=\sum_ia_iPr(a_i)=&lt;\psi|A|\psi&gt;$</p>
-</li>
-<li><p>After measurement, the state transfers to $\frac{E_i|\psi&gt;}{||E_i|\psi&gt;||}$</p>
-</li>
-</ul>
-</li>
+<p><span class="math inline">\(&lt;\psi|A\phi&gt;=&lt;A^+\psi|\phi&gt;\)</span></p>
+<ol start="3" style="list-style-type: decimal">
+<li>Projectors (for non-degenerate cases)</li>
+</ol>
+<p><span class="math inline">\(E_i=|\psi_i&gt;&lt;\psi_i|\)</span>, and <span class="math inline">\(E_iE_j=\delta_{ij}E_i\)</span>, we can write</p>
+<p><span class="math inline">\(A=\sum_ia_i|i&gt;&lt;i|\)</span></p></li>
+<li><p>When we measure an observable A, we'll get <span class="math inline">\(a_i\)</span> with probability <span class="math inline">\(|&lt;\psi|\phi_i&gt;|^2=&lt;\psi|E_i|\psi&gt;=tr(E_i|\psi&gt;&lt;\psi|)\)</span>, the average outcome is</p>
+<p><span class="math inline">\(&lt; a &gt;=\sum_ia_iPr(a_i)=&lt;\psi|A|\psi&gt;\)</span></p></li>
+<li><p>After measurement, the state transfers to <span class="math inline">\(\frac{E_i|\psi&gt;}{||E_i|\psi&gt;||}\)</span></p></li>
 </ul>
 
                 
@@ -930,13 +883,13 @@
 <script>
     new Valine({
         el: '#vcomments',
-        appId: 'PD1ON5Ueb6aHY1tjctcZY7kI-gzGzoHsz',
-        appKey: '17SfUt7HWM6whgdtCblF7qEE',
-        serverURLs: 'https://pd1on5ue.lc-cn-n1-shared.com',
+        appId: 'bGgJXU0RueaCNSizwtgbcApL-MdYXbMMI',
+        appKey: 'D4oSeBWzLaMdsmaPvs2a1WnM',
+        serverURLs: 'https://bggjxu0r.api.lncldglobal.com',
         notify: 'false' === 'true',
         verify: 'true' === 'true',
         visitor: 'true' === 'true',
-        avatar: 'retro',
+        avatar: 'mm',
         pageSize: '10',
         lang: 'en',
         placeholder: 'comment your thoughts'
@@ -1238,7 +1191,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;Total Words:&nbsp;<span
-                        class="white-color">667</span>
+                        class="white-color">670</span>
             
             
             

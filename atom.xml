@@ -6,7 +6,7 @@
   <link href="http://maxwell297.github.io/atom.xml" rel="self"/>
   
   <link href="http://maxwell297.github.io/"/>
-  <updated>2022-10-28T17:38:49.000Z</updated>
+  <updated>2022-10-29T02:28:24.141Z</updated>
   <id>http://maxwell297.github.io/</id>
   
   <author>
@@ -21,14 +21,18 @@
     <link href="http://maxwell297.github.io/qcc-lecture1/"/>
     <id>http://maxwell297.github.io/qcc-lecture1/</id>
     <published>2022-10-28T17:04:53.000Z</published>
-    <updated>2022-10-28T17:38:49.000Z</updated>
+    <updated>2022-10-29T02:28:24.141Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h1 id=&quot;量子通讯与密码&quot;&gt;&lt;a href=&quot;#量子通讯与密码&quot; class=&quot;headerlink&quot; title=&quot;量子通讯与密码&quot;&gt;&lt;/a&gt;量子通讯与密码&lt;/h1&gt;&lt;h2 id=&quot;Lecture-1&quot;&gt;&lt;a href=&quot;#Lecture-1&quot;</summary>
+    <summary type="html">&lt;h1 id=&quot;量子通讯与密码&quot;&gt;量子通讯与密码&lt;/h1&gt;
+&lt;h2 id=&quot;lecture-1&quot;&gt;Lecture 1&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Bra-ket notation&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;Ket - column vector, bra - row</summary>
         
       
     
