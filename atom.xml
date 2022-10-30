@@ -6,7 +6,7 @@
   <link href="http://maxwell297.github.io/atom.xml" rel="self"/>
   
   <link href="http://maxwell297.github.io/"/>
-  <updated>2022-10-29T02:28:24.141Z</updated>
+  <updated>2022-10-30T15:55:23.978Z</updated>
   <id>http://maxwell297.github.io/</id>
   
   <author>
@@ -17,11 +17,39 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Paper reading - CROP</title>
+    <link href="http://maxwell297.github.io/paper-reading-crop/"/>
+    <id>http://maxwell297.github.io/paper-reading-crop/</id>
+    <published>2022-10-30T07:50:12.000Z</published>
+    <updated>2022-10-30T15:55:23.978Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;paper-reading-crop&quot;&gt;Paper reading | CROP&lt;/h1&gt;
+&lt;p&gt;&lt;code&gt;CROP: CERTIFYING ROBUST POLICIES FOR REINFORCEMENT LEARNING THROUGH</summary>
+        
+      
+    
+    
+    
+    <category term="Theoretical RL" scheme="http://maxwell297.github.io/categories/Theoretical-RL/"/>
+    
+    
+    <category term="CS" scheme="http://maxwell297.github.io/tags/CS/"/>
+    
+    <category term="RL" scheme="http://maxwell297.github.io/tags/RL/"/>
+    
+  </entry>
+  
+  <entry>
     <title>QCC lecture1</title>
     <link href="http://maxwell297.github.io/qcc-lecture1/"/>
     <id>http://maxwell297.github.io/qcc-lecture1/</id>
     <published>2022-10-28T17:04:53.000Z</published>
-    <updated>2022-10-29T02:28:24.141Z</updated>
+    <updated>2022-10-30T03:17:13.619Z</updated>
     
     
       

@@ -341,6 +341,19 @@
 </header>
 
     
+<script src="/libs/cryptojs/crypto-js.min.js"></script>
+<script>
+    (function() {
+        let pwd = '';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('Please enter the password to access this article')).toString(CryptoJS.enc.Hex)) {
+                alert('Incorrect password, will return to the home page!');
+                location.href = '/';
+            }
+        }
+    })();
+</script>
+
 
 
 
@@ -527,58 +540,36 @@
     
 
     
-        <div class="card" data-aos="fade-up">
-    <div id="disqus-container" class="card-content">
-        <div id="disqusjs-app"></div>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/disqusjs@3.0.0-experimental.7/dist/browser/styles/disqusjs.css">
-        <script src="https://cdn.jsdelivr.net/npm/disqusjs@3.0.0-experimental.7/dist/browser/disqusjs.es2015.umd.min.js"></script>
-        <script>
-            function forceDisqusJS() {
-                try {
-                    localStorage.setItem('dsqjs_mode', 'dsqjs');
-                } catch (o) {
-                }
-                location.reload();
-            }
 
-            var disqusjs = new DisqusJS({
-                shortname: 'https-maxwell297-github-io',
-                siteName: "MaxwellYao's Blog · 姚佳瑞的博客",
-                identifier: "", // "https://suka.js.org/DisqusJS/",
-                url: "", // "https://suka.js.org/DisqusJS/",
-                api: "https://disqus.com/api/",
-                apikey: 'b6Nfnq0cJQWFkJg6M0cVOQxOkIWOpZbsRaZBK39hNDScEb78e6AfG7nHDQPADpSl',
-                admin: 'MaxwellYao',
-                adminLabel: 'MaxwellYao~'
-            });
+    
 
-            function destroyDisqusJS() {
-                disqusjs.destroy();
-            }
+    
 
-            function renderDisqusJS() {
-                disqusjs.render('#disqusjs-app');
-            }
-
-            renderDisqusJS();
-        </script>
-        <!-- <section class="comments" id="comments">
-            <div id="disqus_thread"></div>
-            <script>
-                var dsqjs = new DisqusJS({
-                    shortname: 'https-maxwell297-github-io',
-                    apikey: 'b6Nfnq0cJQWFkJg6M0cVOQxOkIWOpZbsRaZBK39hNDScEb78e6AfG7nHDQPADpSl',
-                    api: 'https://disqus.skk.moe/disqus/'
-                });
-            </script>
-        </section> -->
+    
+        <div class="disqus-card card" data-aos="fade-up">
+    <div id="disqus_thread" class="card-content">
+        <noscript>Please enable JavaScript to view the
+            <a target="_blank" rel="noopener" href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
     </div>
 </div>
-    
 
-    
+<script type="text/javascript">
+    disqus_config = function () {
+        this.page.url = 'http://maxwell297.github.io/hello-world/';
+        this.page.identifier = '/hello-world/';
+        this.page.title = 'Hello World';
+    };
+    let disqus_shortname = 'https-maxwell297-github-io';
 
-    
+    (function () { // DON'T EDIT BELOW THIS LINE
+        let d = document, s = d.createElement('script');
+        // 如：s.src = 'https://blinkfox.disqus.com/embed.js';
+        s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
 
     
 
@@ -868,7 +859,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;Total Words:&nbsp;<span
-                        class="white-color">670</span>
+                        class="white-color">1.3k</span>
             
             
             
