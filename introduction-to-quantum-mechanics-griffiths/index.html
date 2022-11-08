@@ -4,9 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Paper reading - CROP, Maxwellyao">
-    <meta name="description" content="Paper reading | CROP
-CROP: CERTIFYING ROBUST POLICIES FOR REINFORCEMENT LEARNING THROUGH UNCTIONALSMOOTHING by Fan Wu e">
+    <meta name="keywords" content="Introduction to Quantum Mechanics, Griffiths, Maxwellyao">
+    <meta name="description" content="Reading notes of Quantum Mechanics">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -18,7 +17,7 @@ CROP: CERTIFYING ROBUST POLICIES FOR REINFORCEMENT LEARNING THROUGH UNCTIONALSM
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Paper reading - CROP | Maxwellyao</title>
+    <title>Introduction to Quantum Mechanics, Griffiths | Maxwellyao</title>
     <link rel="icon" type="image/jpeg" href="/medias/cover.jpg">
     
     <style>
@@ -358,12 +357,12 @@ CROP: CERTIFYING ROBUST POLICIES FOR REINFORCEMENT LEARNING THROUGH UNCTIONALSM
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/11.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/19.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Paper reading - CROP</h1>
+                    <h1 class="description center-align post-title">Introduction to Quantum Mechanics, Griffiths</h1>
                 </div>
             </div>
         </div>
@@ -387,12 +386,12 @@ CROP: CERTIFYING ROBUST POLICIES FOR REINFORCEMENT LEARNING THROUGH UNCTIONALSM
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/CS/">
-                                <span class="chip bg-color">CS</span>
+                            <a href="/tags/Quantum/">
+                                <span class="chip bg-color">Quantum</span>
                             </a>
                         
-                            <a href="/tags/RL/">
-                                <span class="chip bg-color">RL</span>
+                            <a href="/tags/Physics/">
+                                <span class="chip bg-color">Physics</span>
                             </a>
                         
                     </div>
@@ -403,8 +402,8 @@ CROP: CERTIFYING ROBUST POLICIES FOR REINFORCEMENT LEARNING THROUGH UNCTIONALSM
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/Theoretical-RL/" class="post-category">
-                                Theoretical RL
+                            <a href="/categories/Quantum-Mechanics/" class="post-category">
+                                Quantum Mechanics
                             </a>
                         
                     </div>
@@ -416,21 +415,21 @@ CROP: CERTIFYING ROBUST POLICIES FOR REINFORCEMENT LEARNING THROUGH UNCTIONALSM
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2022-10-30
+                    2022-11-08
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>Update Date:&nbsp;&nbsp;
-                    2022-10-30
+                    2022-11-08
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    627
+                    999
                 </div>
                 
 
@@ -455,85 +454,129 @@ CROP: CERTIFYING ROBUST POLICIES FOR REINFORCEMENT LEARNING THROUGH UNCTIONALSM
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="paper-reading-crop">Paper reading | CROP</h1>
-<p><code>CROP: CERTIFYING ROBUST POLICIES FOR REINFORCEMENT LEARNING THROUGH UNCTIONALSMOOTHING</code> by <code>Fan Wu et al.</code>.</p>
-<h2 id="introduction">Introduction</h2>
+                <h1 id="introduction-to-quantum-mechanics">Introduction to Quantum Mechanics</h1>
+<h2 id="chapter-1-the-wave-function">Chapter 1 | The wave function</h2>
+<h3 id="schrodinger-equation">Schrodinger equation</h3>
 <ul>
-<li>This paper asks two questions mainly:</li>
-<li>How to provide efficient and effective robustness certification for RL algorithms?</li>
-<li>What criteria should be used to certify the robustness of RL algorithms?</li>
-<li>Focus on Q-learning with two certification criteria</li>
-<li>Per-state action action stability</li>
-<li><p>Lower bound of perturbed cumulative reward</p></li>
-<li><p>Contributions of this paper</p></li>
-<li><p>Propose a framework for certifying the robustness of Q-learning algorithms</p>
-<ul>
-<li>2 Robustness certification criteria</li>
-</ul></li>
-<li><p>Prove the certification radius for input state and lower bound of perturbed cumulative reward under bounded adversarial state perturbations</p></li>
-<li><p>Conduct extensive experiments to provide certification for nine empirically robust RL</p>
-<p>algorithms on multiple RL environments</p></li>
+<li>The wave function of a particle is got by solving <strong>Schrodinger equation</strong>: <span class="math display">\[
+  i\hbar \frac{\partial \Psi}{\partial t}=-\frac{\hbar^2}{2m}\frac{\partial^2\Psi}{\partial x^2}+V\Psi
+  \]</span> where <span class="math inline">\(\hbar =\frac h{2\pi}=1.054\times 10^{-34}J\cdot s\)</span>.</li>
 </ul>
-<h2 id="preliminaries">Preliminaries</h2>
+<h3 id="statistical-interpretation">Statistical interpretation</h3>
 <ul>
-<li>Discounted discrete-time MDPs</li>
-<li>Defined by <span class="math inline">\((\mathcal{S,A},R,P,\gamma,d_0)\)</span>, which represent states, discrete actions, reward function, transition function, discount factor and initial state distribution respectively.</li>
+<li>Born's statistical interpretation:</li>
 </ul>
-<h2 id="robustness-certification-in-q-learning">Robustness certification in Q-learning</h2>
+<p><img src="/introduction-to-quantum-mechanics-griffiths/1.png" class=""> - <strong>Copenhagen (orthodox) interpretation</strong>: it's the act of measurement that forces a particle to "take a stand". The measurement radically alters the wave function of a particle and makes it sharply peaked around <span class="math inline">\(C\)</span>(which is the result position of measurement).</p>
+<h3 id="normalization">Normalization</h3>
 <ul>
-<li>Consider the standard adversarial setting in Q-learning, where the adversary can apply <span class="math inline">\(l_2\)</span> bounded perturbation <span class="math inline">\(\mathcal B^{\varepsilon}\)</span> to input state observations of the agent during decision time.</li>
+<li>We need the normalization to be consistent with the statistical interpretation</li>
 </ul>
-<h3 id="robustness-certification-for-q-learning-with-different-criteria">Robustness certification for Q-learning with different criteria</h3>
+<p><img src="/introduction-to-quantum-mechanics-griffiths/2.png" class=""> - The Schrodinger equation has the property that it automatically preserves the normalization of the wave function: <span class="math inline">\(\frac{d}{dt}\int_{-\infty}^{+\infty}|\Psi(x,t)|^2dx=0\)</span> since <span class="math display">\[
+  \frac{d}{dt}\int_{-\infty}^{+\infty}|\Psi(x,t)|^2dx=\int_{-\infty}^{+\infty}\frac \partial{\partial t}|\Psi(x,t)|^2dx,\\
+  \frac{\partial}{\partial t}|\Psi|^2=\Psi^*\frac{\partial \Psi}{\partial t}+\frac{\partial \Psi^*}{\partial t}\Psi.
+  \]</span> Plug in the Schrodinger equation, we'll get <span class="math display">\[
+  \frac{\partial}{\partial t}|\Psi|^2=\frac \partial{\partial x}[\frac{i\hbar}{2m}(\Psi^*\frac{\partial \Psi}{\partial t}-\frac{\partial \Psi^*}{\partial t}\Psi)],
+  \]</span> and the integral will be <span class="math inline">\(\frac{i\hbar}{2m}(\Psi^*\frac{\partial \Psi}{\partial t}-\frac{\partial \Psi^*}{\partial t}\Psi)|_{-\infty}^{+\infty}\)</span>, which is 0 by the normalizable condition.</p>
+<h3 id="momentum">Momentum</h3>
 <ul>
-<li><p><strong>Def. 1.</strong> Given a trained network <span class="math inline">\(Q^\pi\)</span>, define the robustness certification for per-state action as the <em>maximum perturbation magnitude</em> <span class="math inline">\(\bar \varepsilon\)</span>, s.t. for any perturbation <span class="math inline">\(\delta\in\mathcal B^{\bar\varepsilon}\)</span>, the predicted action under the perturbed state will be the same as the action taken in the clean environment, i.e., <span class="math inline">\(\pi(s+\delta)=\pi(s),\forall \delta\in\mathcal B^{\bar\epsilon}\)</span>.</p></li>
-<li><p><strong>Def. 2.</strong> Define the <em>perturbed cumulative reward</em> as following <span class="math display">\[
-  J_{\varepsilon}(\pi)\triangleq \sum_{t=0}^\infty\gamma^t R(s_t,\pi(s_t+\delta_t)),\text{ where }s_{t+1}\sim P(s_t,\pi(s_t+\delta_t)),s_0\sim d_0
+<li>For a particle in state <span class="math inline">\(\Psi\)</span>, the expectation value of <span class="math inline">\(x\)</span> is <span class="math display">\[
+  \langle x\rangle =\int_{-\infty}^{+\infty}x|\Psi(x,t)|^2dx,
+  \]</span> which is the average of measurements on an <em>ensemble</em> of identically-prepared systems.</li>
+</ul>
+<p>Plug in the equation of <span class="math inline">\(\frac{\partial |\Psi|^2}{\partial t}\)</span> we get previously and utilize integration-by-parts, we can get <span class="math display">\[
+  \frac{d\langle x\rangle}{dt}=-\frac{i\hbar}{m}\int\Psi^*\frac{\partial \Psi}{\partial x}dx.
+  \]</span></p>
+<ul>
+<li><p>Let <span class="math inline">\(\langle v\rangle=\frac{d\langle x\rangle}{dt}\)</span>, we have <span class="math inline">\(\langle p\rangle=m\langle v\rangle=-i\hbar\int\Psi^*\frac{\partial \Psi}{\partial x}dx\)</span>.</p></li>
+<li><p>Defining the position <strong>operator</strong> as <span class="math inline">\(x\)</span>, the momentum operator as <span class="math inline">\(-i\hbar (\partial/\partial x)\)</span>, we can calculate the expectation of values by "sandwich" the appropriate operator between <span class="math inline">\(\Psi^*,\Psi\)</span> and integrate.</p></li>
+<li><p>All classical dynamical variables can be expressed in terms of position and momentum, thus for any quantity <span class="math inline">\(Q(x,p)\)</span>, we have</p>
+<img src="/introduction-to-quantum-mechanics-griffiths/3.png" class="">
+<h3 id="uncertainty-principle">Uncertainty principle</h3></li>
+<li><p>The wavelength of <span class="math inline">\(\Psi\)</span> is related to the <em>momentum</em> of the particle by the <strong>de Broglie formula</strong>: <span class="math display">\[
+  p=\frac{h}{\lambda}.
   \]</span></p></li>
-<li><p><strong>Def. 3.</strong> The robustness certification of cumulative reward is the <em>lower bound of perturbed cumulative reward</em> <span class="math inline">\(\underline J\)</span> s.t. <span class="math inline">\(\underline J\le J_{\varepsilon}(\pi)\)</span> under the perturbation in <span class="math inline">\(\mathcal B^\varepsilon\)</span> applied to all time steps.</p></li>
-</ul>
-<h2 id="robustness-certification-strategies-for-per-state-action">Robustness certification strategies for per-state action</h2>
-<h3 id="action-value-functional-smoothing">Action-value functional smoothing</h3>
-<ul>
-<li><p>Given <span class="math inline">\(Q^\pi\)</span> with policy <span class="math inline">\(\pi\)</span>, derive a smoothed function <span class="math inline">\(\tilde Q^\pi\)</span> through per-state <em>local smoothing</em>.</p></li>
-<li><p>At each time step <span class="math inline">\(t\)</span>, for each action <span class="math inline">\(a\in \mathcal A\)</span>, we draw random noise from a Gaussian distribution <span class="math inline">\(\mathcal N(0,\sigma^2I_N)\)</span> and do</p>
-<img src="/paper-reading-crop/image-1.png" class="" title="Per-state local smoothing"></li>
-<li>Then based on the definition of smoothness, we have the following theorems</li>
-<li><img src="/paper-reading-crop/image-2.png" class="" title="Lemma 1"></li>
-<li><img src="/paper-reading-crop/image-3.png" class="" title="Theorem 1"></li>
-</ul>
-<h3 id="local-randomized-smoothing">Local randomized smoothing</h3>
-<ul>
-<li><p>Challenges for Q-learning compared with standard classification task.</p></li>
-<li><p>Unknown range <span class="math inline">\([V_{\min},V_{\max}]\)</span></p>
-<ul>
-<li>Do pre-processing: estimate the output range based on a finite set of valid states</li>
-</ul></li>
-<li><p>For Q-networks, the outputs aren't probabilities, and calculating the multinomial proportions becomes challenging.</p>
-<ul>
-<li><em>Hoeffding's inequality</em></li>
-</ul></li>
-</ul>
-<h2 id="robustness-certification-strategies-for-the-cumulative-reward">Robustness certification strategies for the cumulative reward</h2>
-<h3 id="global-smoothing">Global smoothing</h3>
-<ul>
-<li><p>Perform <em>global smoothing</em> on the state trajectory by viewing the entire trajectory as a function.</p></li>
-<li><p><strong>Def. 4.</strong> Given a state trajectory <span class="math inline">\((s_0,s_1,\cdots,s_{H-1})\)</span>, we derive a <span class="math inline">\(\sigma\)</span>-randomized trajectory as <span class="math inline">\((s^\prime_0,s_1^\prime,\cdots,s_{H-1}^\prime)\)</span> where <span class="math inline">\(s_{t+1}^\prime\sim P(s_t^\prime,\pi(s^\prime_t+\Delta_t)),\Delta_t\sim\mathcal N(0,\sigma^2I_N)\)</span>, and <span class="math inline">\(s_0^\prime=s_0\sim d_0\)</span>.</p></li>
-</ul>
-<p>Define <span class="math inline">\(\oplus\)</span> as concatenation given input states or noise that are added to each state.</p>
-<ul>
-<li><p><strong>Def. 5.</strong> Define a bounded <em>perturbed return function</em> <span class="math inline">\(F_\pi:\mathbb R^{H\times N}\rightarrow [J_{\min},J_{\max}]\)</span> representing cumulative reward with potential perturbation <span class="math inline">\(\delta\)</span>: <span class="math display">\[
-  F_\pi(\oplus_{t=0}^{H-1}\delta_t)\triangleq\sum_{t=0}^H\gamma^tR(s_t,\pi(s_t+\delta_t)),\text{ where }s_{t+1}\sim P(s_t,\pi(s_t+\delta_t)),s_0\sim d_0
+<li><p>Heisenberg's <strong>uncertainty principle</strong>: <span class="math display">\[
+  \sigma_x\sigma_p\ge \frac{\hbar}2
   \]</span></p></li>
-<li><p>Then we can also derive two theorems on the base of above definitions.</p></li>
-<li><img src="/paper-reading-crop/image-4.png" class="" title="Lemma 2 &amp; Theorem 2"></li>
-<li><p><strong>Percentile bound.</strong></p></li>
 </ul>
-<p><img src="/paper-reading-crop/image-5.png" class="" title="Percentile smoothing &amp; Theorem 3"></p>
-<h3 id="local-smoothing">Local smoothing</h3>
+<h2 id="chapter-2-time-independent-schrodinger-equation">Chapter 2 | Time independent Schrodinger equation</h2>
+<h3 id="stationary-states">Stationary states</h3>
 <ul>
-<li><strong>Theorem 4</strong></li>
+<li><p>Suppose the wave function is <span class="math inline">\(\Psi(x,t)=\psi(x)\varphi(t)\)</span>, then Schrodinger equation can be solved by the method of <strong>separation of variables</strong>, and we have <span class="math display">\[
+  i\hbar\frac 1\varphi\frac{d\varphi}{dt}=-\frac{\hbar^2}{2m}\frac 1\psi\frac{d^2\psi}{dx^2}+V.
+  \]</span> So both hand sides should be equal to a constant, which we call <span class="math inline">\(E\)</span>.</p></li>
+<li><p>We get two ordinary differential equations and result in <span class="math display">\[
+\varphi(t)=e^{-iEt/\hbar}.
+\]</span></p></li>
+<li><p>The <strong>time-independent Schrodinger equation</strong></p>
+<img src="/introduction-to-quantum-mechanics-griffiths/4.png" class=""></li>
+<li><p>Reason for considering separable wave functions:</p></li>
+<li><p>They are <strong>stationary states</strong>, i.e., the probability density <span class="math inline">\(|\Psi|^2=|\psi(x)|^2\)</span> is time-independent. The same thing holds for the expectation of any dynamic variable.</p></li>
+<li><p>They are states of <em>definite total energy</em>. The <strong>Hamiltonian</strong> (kinetic plus potential): <span class="math display">\[
+H(x,p)=\frac{p^2}{2m}+V(x),
+\]</span> has a corresponding Hamiltonian operator by substituting <span class="math inline">\(p\)</span> with <span class="math inline">\(-i\hbar\frac \partial{\partial t}\)</span>.</p>
+<p>Thus the time-independent Schrodinger equation can be written <span class="math inline">\(\hat H\psi=E\psi\)</span>.</p>
+<ul>
+<li>Expectation is <span class="math inline">\(\langle H\rangle=E\)</span>, with <span class="math inline">\(\langle H^2\rangle=E^2\)</span>.</li>
+<li>Variance of <span class="math inline">\(H\)</span> is <span class="math inline">\(\sigma_H^2=0\)</span>.</li>
+</ul></li>
+<li><p>The general solution is a <strong>linear combination</strong> of separable solutions.</p>
+<p>Different energies (<em>allowed energy</em>) <span class="math inline">\(\{E_n\}\)</span> correspond to different wave functions. <span class="math display">\[
+\Psi(x,t)=\sum_{n=1}^\infty c_n\psi_n(x)e^{-iE_nt/\hbar}
+\]</span> is also a solution to Schrodinger equation.</p></li>
+<li><p>The physical meaning of <span class="math inline">\(\{c_n\}\)</span>.</p></li>
 </ul>
-<p><img src="/paper-reading-crop/image-6.png" class="" title="Percentile Theorem 4"></p>
+<p><span class="math inline">\(|c_n|^2\)</span> is the probability that a measurement of the energy would return the value <span class="math inline">\(E_n\)</span>.</p>
+<ul>
+<li><span class="math display">\[
+\sum_{n=1}^\infty|c_n|^2=1,\langle H\rangle=\sum_{n=1}^\infty|c_n|^2E_n.
+\]</span></li>
+</ul>
+<h3 id="the-infinite-square-well">The infinite square well</h3>
+<ul>
+<li><p>Suppose <span class="math display">\[
+  V(x)=\left\{\begin{array}{cc}
+  0, &amp; 0\le x\le a,\\
+  \infty, &amp; \text{otherwise}
+  \end{array}\right.
+  \]</span></p></li>
+<li><p>By <span class="math inline">\(\psi(0)=\psi(a)=0\)</span>, and normalization requirement, we have <span class="math display">\[
+\psi_n(x)=\sqrt{\frac 2a}\sin(\frac{n\pi}ax),\text{ and }E_n=\frac{n^2\pi^2\hbar^2}{2ma^2}.
+\]</span></p></li>
+<li><p><span class="math inline">\(\psi_1\)</span> with the lowest energy is called the <strong>ground state</strong>, while the others are called <strong>excited states</strong>.</p></li>
+<li><p>Properties of <span class="math inline">\(\psi_n\)</span></p></li>
+<li><p>They are alternately even and odd w.r.t. the center of the well.</p></li>
+<li><p><span class="math inline">\(\int\psi_m^*\psi_ndx=\delta_{mn}\)</span>.</p></li>
+<li><p>They're complete. <span class="math inline">\(\forall f(x)\)</span>, it can be expressed as <span class="math display">\[
+f(x)=\sum_{n=1}^\infty c_n\psi_n(x),\text{ where }c_n=\int\psi_n(x)^*f(x)dx.
+\]</span></p></li>
+<li><p>The general solution to Schrodinger equation:</p></li>
+</ul>
+<p><img src="/introduction-to-quantum-mechanics-griffiths/5.png" class=""></p>
+<h3 id="the-harmonic-oscillator">The harmonic oscillator</h3>
+<ul>
+<li></li>
+</ul>
+<h2 id="chapter-3-formalism">Chapter 3 | Formalism</h2>
+<h3 id="hilbert-space">Hilbert space</h3>
+<ul>
+<li><p>The set of all <strong>square-integrable</strong> functions, on a specified interval constitutes a vector space <span class="math inline">\(L^2(a,b)\)</span>, or <em>Hilbert space</em>. <span class="math display">\[
+  f(x)\text{ s.t. }\int_a^b|f(x)|^2dx&lt;\infty.
+  \]</span></p></li>
+<li><p>Inner product of two functions <span class="math inline">\(f,g\)</span> is <span class="math inline">\(\langle f|g\rangle=\int_a^bf^*g\ dx\)</span>.</p></li>
+<li><p>Schwarz inequality:</p>
+<img src="/introduction-to-quantum-mechanics-griffiths/6.png" class="">
+<h3 id="observables">Observables</h3></li>
+<li><p>Observables are represented by hermitian operators.</p></li>
+<li><p>Hermitian conjugate (or adjoint) of an operator <span class="math inline">\(\hat Q\)</span> is <span class="math inline">\(\hat Q^\dagger\)</span> s.t. <span class="math display">\[
+  \langle f|\hat Qg\rangle=\langle \hat Q^\dagger f|g\rangle,\forall f,g.
+  \]</span></p></li>
+<li><p>Hermitian operator satisfies <span class="math inline">\(\hat Q=\hat Q^\dagger\)</span>.</p></li>
+<li><p>Determinate states: every measurement of <span class="math inline">\(Q\)</span> is certain to return the same value, say, <span class="math inline">\(q\)</span>.</p></li>
+<li>Determinate states of <span class="math inline">\(Q\)</span> are <strong>eigenfunctions</strong> of <span class="math inline">\(\hat Q\)</span>.</li>
+<li>All eigenvalues of <span class="math inline">\(Q\)</span> is called its <em>spectrum</em>.</li>
+<li><p>If two or more eigenfunctions share the same eigenvalue, the spectrum is said to be <em>degenerate</em>.</p></li>
+</ul>
 
                 
             </div>
@@ -560,7 +603,7 @@ CROP: CERTIFYING ROBUST POLICIES FOR REINFORCEMENT LEARNING THROUGH UNCTIONALSM
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://maxwell297.github.io/paper-reading-crop/">http://maxwell297.github.io/paper-reading-crop/</a>
+                    <a href="http://maxwell297.github.io/introduction-to-quantum-mechanics-griffiths/">http://maxwell297.github.io/introduction-to-quantum-mechanics-griffiths/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -598,12 +641,12 @@ CROP: CERTIFYING ROBUST POLICIES FOR REINFORCEMENT LEARNING THROUGH UNCTIONALSM
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/CS/">
-                                    <span class="chip bg-color">CS</span>
+                                <a href="/tags/Quantum/">
+                                    <span class="chip bg-color">Quantum</span>
                                 </a>
                             
-                                <a href="/tags/RL/">
-                                    <span class="chip bg-color">RL</span>
+                                <a href="/tags/Physics/">
+                                    <span class="chip bg-color">Physics</span>
                                 </a>
                             
                         </div>
@@ -647,9 +690,9 @@ CROP: CERTIFYING ROBUST POLICIES FOR REINFORCEMENT LEARNING THROUGH UNCTIONALSM
 
 <script type="text/javascript">
     disqus_config = function () {
-        this.page.url = 'http://maxwell297.github.io/paper-reading-crop/';
-        this.page.identifier = '/paper-reading-crop/';
-        this.page.title = 'Paper reading - CROP';
+        this.page.url = 'http://maxwell297.github.io/introduction-to-quantum-mechanics-griffiths/';
+        this.page.identifier = '/introduction-to-quantum-mechanics-griffiths/';
+        this.page.title = 'Introduction to Quantum Mechanics, Griffiths';
     };
     let disqus_shortname = 'https-maxwell297-github-io';
 
@@ -679,9 +722,10 @@ CROP: CERTIFYING ROBUST POLICIES FOR REINFORCEMENT LEARNING THROUGH UNCTIONALSM
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+                <i class="far fa-dot-circle"></i>&nbsp;Current
+            </div>
             <div class="card">
                 <a href="/introduction-to-quantum-mechanics-griffiths/">
                     <div class="card-image">
@@ -699,9 +743,9 @@ CROP: CERTIFYING ROBUST POLICIES FOR REINFORCEMENT LEARNING THROUGH UNCTIONALSM
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-11-08
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-11-08
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -714,6 +758,7 @@ CROP: CERTIFYING ROBUST POLICIES FOR REINFORCEMENT LEARNING THROUGH UNCTIONALSM
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -736,31 +781,31 @@ CROP: CERTIFYING ROBUST POLICIES FOR REINFORCEMENT LEARNING THROUGH UNCTIONALSM
                 Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/qcc-lecture1/">
+                <a href="/paper-reading-crop/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="QCC lecture1">
+                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="Paper reading - CROP">
                         
-                        <span class="card-title">QCC lecture1</span>
+                        <span class="card-title">Paper reading - CROP</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Lecture notes
+                            
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-10-29
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-10-30
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Quantum-Computation-Cryptography/" class="post-category">
-                                    Quantum Computation & Cryptography
+                            <a href="/categories/Theoretical-RL/" class="post-category">
+                                    Theoretical RL
                                 </a>
                             
                             
@@ -774,8 +819,8 @@ CROP: CERTIFYING ROBUST POLICIES FOR REINFORCEMENT LEARNING THROUGH UNCTIONALSM
                         <span class="chip bg-color">CS</span>
                     </a>
                     
-                    <a href="/tags/Quantum/">
-                        <span class="chip bg-color">Quantum</span>
+                    <a href="/tags/RL/">
+                        <span class="chip bg-color">RL</span>
                     </a>
                     
                 </div>

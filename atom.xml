@@ -6,7 +6,7 @@
   <link href="http://maxwell297.github.io/atom.xml" rel="self"/>
   
   <link href="http://maxwell297.github.io/"/>
-  <updated>2022-10-30T15:55:23.978Z</updated>
+  <updated>2022-11-08T10:29:20.126Z</updated>
   <id>http://maxwell297.github.io/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Introduction to Quantum Mechanics, Griffiths</title>
+    <link href="http://maxwell297.github.io/introduction-to-quantum-mechanics-griffiths/"/>
+    <id>http://maxwell297.github.io/introduction-to-quantum-mechanics-griffiths/</id>
+    <published>2022-11-08T09:56:29.000Z</published>
+    <updated>2022-11-08T10:29:20.126Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;introduction-to-quantum-mechanics&quot;&gt;Introduction to Quantum Mechanics&lt;/h1&gt;
+&lt;h2 id=&quot;chapter-1-the-wave-function&quot;&gt;Chapter 1 | The wave</summary>
+        
+      
+    
+    
+    
+    <category term="Quantum Mechanics" scheme="http://maxwell297.github.io/categories/Quantum-Mechanics/"/>
+    
+    
+    <category term="Quantum" scheme="http://maxwell297.github.io/tags/Quantum/"/>
+    
+    <category term="Physics" scheme="http://maxwell297.github.io/tags/Physics/"/>
+    
+  </entry>
   
   <entry>
     <title>Paper reading - CROP</title>
