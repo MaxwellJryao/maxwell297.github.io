@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="QCC lecture1, Maxwellyao">
-    <meta name="description" content="Lecture notes">
+    <meta name="keywords" content="tools, Maxwellyao">
+    <meta name="description" content="Maxwellyao">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>QCC lecture1 | Maxwellyao</title>
+    <title>tools | Maxwellyao</title>
     <link rel="icon" type="image/jpeg" href="/medias/cover.jpg">
     
     <style>
@@ -362,569 +362,98 @@
 
 </header>
 
-    
-<script src="/libs/cryptojs/crypto-js.min.js"></script>
-<script>
-    (function() {
-        let pwd = '';
-        if (pwd && pwd.length > 0) {
-            if (pwd !== CryptoJS.SHA256(prompt('Please enter the password to access this article')).toString(CryptoJS.enc.Hex)) {
-                alert('Incorrect password, will return to the home page!');
-                location.href = '/';
-            }
-        }
-    })();
-</script>
-
-
-
-
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/2.jpg')">
-    <div class="container" style="right: 0px;left: 0px;">
-        <div class="row">
-            <div class="col s12 m12 l12">
-                <div class="brand">
-                    <h1 class="description center-align post-title">QCC lecture1</h1>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-
-
-<main class="post-container content">
-
-    
+    <div class="bg-cover pd-header about-cover">
+    <div class="container">
     <div class="row">
-    <div id="main-content" class="col s12 m12 l9">
-        <!-- 文章内容详情 -->
-<div id="artDetail">
-    <div class="card">
-        <div class="card-content article-info">
-            <div class="row tag-cate">
-                <div class="col s7">
-                    
-                    <div class="article-tag">
-                        
-                            <a href="/tags/CS/">
-                                <span class="chip bg-color">CS</span>
-                            </a>
-                        
-                            <a href="/tags/Quantum/">
-                                <span class="chip bg-color">Quantum</span>
-                            </a>
-                        
-                    </div>
-                    
-                </div>
-                <div class="col s5 right-align">
-                    
-                    <div class="post-cate">
-                        <i class="fas fa-bookmark fa-fw icon-category"></i>
-                        
-                            <a href="/categories/Quantum-Computation-Cryptography/" class="post-category">
-                                Quantum Computation & Cryptography
-                            </a>
-                        
-                    </div>
-                    
-                </div>
+    <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
+        <div class="brand">
+            <div class="title center-align">
+                
+                A personal blog of Maxwell Yao
+                
             </div>
 
-            <div class="post-info">
+            <div class="description center-align">
                 
-                <div class="post-date info-break-policy">
-                    <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2022-10-29
-                </div>
+                <span id="subtitle"></span>
+                <script src="/libs/typed/typed.js"></script>
+                <script>
+                    var typed = new Typed("#subtitle", {
+                        strings: [ 
+                            
+                                "从来没有真正的绝境, 只有心灵的迷途",
+                            
+                                "Never really desperate, only the lost of the soul",
+                            
+                        ],
+                        startDelay: 300,
+                        typeSpeed: 100,
+                        loop: true,
+                        backSpeed: 50,
+                        showCursor: true
+                    });
+                </script>
                 
-
-                
-                <div class="post-date info-break-policy">
-                    <i class="far fa-calendar-check fa-fw"></i>Update Date:&nbsp;&nbsp;
-                    2022-10-30
-                </div>
-                
-
-                
-                <div class="info-break-policy">
-                    <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    596
-                </div>
-                
-
-                
-
-                
-                    <div id="busuanzi_container_page_pv" class="info-break-policy">
-                        <i class="far fa-eye fa-fw"></i>Read Count:&nbsp;&nbsp;
-                        <span id="busuanzi_value_page_pv"></span>
-                    </div>
-				
             </div>
         </div>
-        <hr class="clearfix">
-
-        
-        <!-- 是否加载使用自带的 prismjs. -->
-        <link rel="stylesheet" href="/libs/prism/prism.min.css">
-        
-
-        
-
-        <div class="card-content article-card-content">
-            <div id="articleContent">
-                <h1 id="量子通讯与密码">量子通讯与密码</h1>
-<h2 id="lecture-1">Lecture 1</h2>
-<ul>
-<li><p>Bra-ket notation</p></li>
-<li>Ket - column vector, bra - row vector</li>
-<li><p><span class="math inline">\(&lt;\psi|=|\psi&gt;^{+}\)</span></p></li>
-<li><p>Hilbert space</p></li>
-</ul>
-<ol style="list-style-type: decimal">
-<li><span class="math inline">\(&lt;\psi|\psi&gt; &gt;0\)</span> for all <span class="math inline">\(|\psi&gt;\ne 0\)</span></li>
-<li><span class="math inline">\(&lt;\phi|(a|\psi_1&gt;+b|\psi_2&gt;)=a&lt;\phi|\psi_1&gt;+b&lt;\phi|\psi_2&gt;\)</span></li>
-<li><span class="math inline">\(&lt;\phi|\psi&gt;=&lt;\psi|\phi&gt;^*\)</span></li>
-</ol>
-<ul>
-<li><p>Ray</p></li>
-<li>If <span class="math inline">\(&lt;\psi|\psi&gt;=1\)</span>, then <span class="math inline">\(|\psi&gt;\)</span> is called a ray</li>
-<li>In quantum mechanics, if <span class="math inline">\(a\ne 0\)</span>, then <span class="math inline">\(a|\psi&gt;, |\psi&gt;\)</span> represent the same state(the overall phase doesn't matter)</li>
-<li><p>However, note that <span class="math inline">\(e^{i\theta}|\psi&gt;+|\phi&gt;\ne|\psi&gt;+|\phi&gt;\)</span>, where <span class="math inline">\(e^{i\theta}\)</span> is the relative phase</p></li>
-<li><p>State(<span class="math inline">\(|\psi&gt;\)</span>)</p></li>
-<li><p>A complete description of a system</p></li>
-<li><p>Spin-<span class="math inline">\(\frac 12\)</span></p></li>
-<li><span class="math inline">\(|0&gt;\)</span>-up, <span class="math inline">\(|1&gt;\)</span>-down</li>
-<li><p>spin-1: H-<span class="math inline">\(|0&gt;\)</span>, V-<span class="math inline">\(|1&gt;\)</span> (<em>relation between spin-1 &amp; spin-<span class="math inline">\(\frac 12\)</span></em>)</p></li>
-<li><p>Born's rule</p></li>
-<li><span class="math inline">\(|\psi&gt;=a|0&gt;+b|1&gt;\)</span>, then the possibility to get
-<ul>
-<li><span class="math inline">\(|0&gt;:\frac{a^2}{a^2+b^2}\)</span></li>
-<li><span class="math inline">\(|1&gt;:\frac{b^2}{a^2+b^2}\)</span></li>
-</ul></li>
-<li><p>Qudit</p></li>
-<li><span class="math inline">\(|\psi&gt;=\sum_0^{d-1}c_i|i&gt;\)</span></li>
-<li>Number of real variable parameters: <span class="math inline">\(2d-2\)</span>
-<ul>
-<li>Global phase</li>
-<li>Normalization</li>
-</ul></li>
-<li><p>Density matrix</p></li>
-<li><p><span class="math inline">\(\rho\equiv|\phi&gt;&lt;\phi|\)</span>, is a <span class="math inline">\(d\times d\)</span> matrix(where <span class="math inline">\(|\phi&gt;\)</span> is required to be normalized)</p></li>
-<li><p>For qubit, <span class="math inline">\(\rho=\begin{pmatrix}|a|^2 &amp; ab^*\\ a^*b &amp; |b|^2\end{pmatrix}\)</span></p></li>
-<li><p>Properties</p>
-<ol style="list-style-type: decimal">
-<li><p><span class="math inline">\(\rho^+=\rho\)</span></p></li>
-<li><p>tr(<span class="math inline">\(\rho\)</span>) = 1</p></li>
-<li><p><span class="math inline">\(\rho\ge0\)</span></p></li>
-<li><p>1 <span class="math inline">\(\rho^2=\rho\)</span>(equivalent to 4. 2 tr<span class="math inline">\((\rho^2)=1\)</span>)</p></li>
-</ol></li>
-<li><p>Use unitary normalization to use {1,2,3,4.2} to prove the form of <span class="math inline">\(\rho=|\phi&gt;&lt;\phi|\)</span></p></li>
-<li><p>For qubit</p></li>
-<li><p><span class="math inline">\(|\psi&gt;=a|0&gt;+b|1&gt;=cos\frac \theta 2|0&gt;+e^{i\phi}sin\frac \theta 2|1&gt;\)</span> on the Bloch sphere</p>
-<img src="/qcc-lecture1/image-1.png" class="" title="Bloch Sphere">
-<ul>
-<li><span class="math inline">\(|+y&gt;=|+i&gt;,|-y&gt;=|-i&gt;\)</span></li>
-</ul></li>
-<li><p>The meaning of 3 coordinates</p>
-<p>Z: <span class="math inline">\(cos \theta=cos^2\frac \theta 2-sin^2\frac \theta 2=Pr(Z=1)-Pr(Z=-1)=&lt;\sigma_z&gt;\)</span></p>
-<p>X: <span class="math inline">\(&lt;\sigma_x&gt;\)</span>, Y: <span class="math inline">\(&lt;\sigma_y&gt;\)</span></p></li>
-<li><p>Orthogonal states in Bloch sphere</p></li>
-<li><p><span class="math inline">\((x_1,y_1,z_1),(x_2,y_2,z_2)\)</span> opposite orientation</p></li>
-<li><p>Bases</p>
-<p><span class="math inline">\(\mathcal Z=\{|0&gt;,|1&gt;\}, \mathcal X = \{|+&gt;,|-&gt;\},\mathcal Y=\{|+i&gt;,|-i&gt;\}\)</span></p></li>
-<li><p>Pauli matrix</p></li>
-</ul>
-<p><img src="/qcc-lecture1/image-2.png" class="" title="Pauli matrices"></p>
-<p>and <span class="math inline">\(\sigma_0=I\)</span> (<em>relation between Pauli matrix and the XYZ coordinates</em>)</p>
-<ul>
-<li><p>Eigenvectors and eigenvalues</p>
-<p><span class="math inline">\(\sigma_x-|+&gt;,|-&gt;\)</span>, <span class="math inline">\(\sigma_y-|+i&gt;,|-i&gt;\)</span>, <span class="math inline">\(\sigma_z-|0&gt;,|1&gt;\)</span></p></li>
-<li><p>Mutually unbiased states(MUB: <span class="math inline">\(X,Y,Z\)</span>)</p>
-<p><span class="math inline">\(|&lt;0|+&gt;|^2=\frac 12\)</span></p></li>
-<li><p>In MUB, for 2 bases <span class="math inline">\(\{|\psi_i&gt;\}_{i\in[d]},\{|\phi_i&gt;\}_{j\in[d]}\)</span></p>
-<p><span class="math inline">\(\forall i,j, |&lt;\psi_i|\phi_j&gt;|^2=\frac 1d\)</span>.</p>
-<p>If d is prime or prime power, d+1 MUB (<em>why only one MUB for d=3</em>)</p>
-<p>For any d, the number of MUB is no more than d+1, no less than 3</p></li>
-<li><p>Observable and Measurement</p></li>
-<li><p>In Q.M., an observable is a self-adjoint operator</p>
-<ol style="list-style-type: decimal">
-<li><p>Linear</p></li>
-<li><p>Adjoint</p></li>
-</ol>
-<p><span class="math inline">\(&lt;\psi|A\phi&gt;=&lt;A^+\psi|\phi&gt;\)</span></p>
-<ol start="3" style="list-style-type: decimal">
-<li>Projectors (for non-degenerate cases)</li>
-</ol>
-<p><span class="math inline">\(E_i=|\psi_i&gt;&lt;\psi_i|\)</span>, and <span class="math inline">\(E_iE_j=\delta_{ij}E_i\)</span>, we can write</p>
-<p><span class="math inline">\(A=\sum_ia_i|i&gt;&lt;i|\)</span></p></li>
-<li><p>When we measure an observable A, we'll get <span class="math inline">\(a_i\)</span> with probability <span class="math inline">\(|&lt;\psi|\phi_i&gt;|^2=&lt;\psi|E_i|\psi&gt;=tr(E_i|\psi&gt;&lt;\psi|)\)</span>, the average outcome is</p>
-<p><span class="math inline">\(&lt; a &gt;=\sum_ia_iPr(a_i)=&lt;\psi|A|\psi&gt;\)</span></p></li>
-<li><p>After measurement, the state transfers to <span class="math inline">\(\frac{E_i|\psi&gt;}{||E_i|\psi&gt;||}\)</span></p></li>
-</ul>
-
-                
-            </div>
-            <hr/>
-
-            
-
-    <div class="reprint" id="reprint-statement">
-        
-            <div class="reprint__author">
-                <span class="reprint-meta" style="font-weight: bold;">
-                    <i class="fas fa-user">
-                        Author:
-                    </i>
-                </span>
-                <span class="reprint-info">
-                    <a href="/about" rel="external nofollow noreferrer">Maxwell Yao</a>
-                </span>
-            </div>
-            <div class="reprint__type">
-                <span class="reprint-meta" style="font-weight: bold;">
-                    <i class="fas fa-link">
-                        Link:
-                    </i>
-                </span>
-                <span class="reprint-info">
-                    <a href="http://maxwell297.github.io/qcc-lecture1/">http://maxwell297.github.io/qcc-lecture1/</a>
-                </span>
-            </div>
-            <div class="reprint__notice">
-                <span class="reprint-meta" style="font-weight: bold;">
-                    <i class="fas fa-copyright">
-                        Reprint policy:
-                    </i>
-                </span>
-                <span class="reprint-info">
-                    All articles in this blog are used except for special statements
-                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
-                    reprint policy. If reproduced, please indicate source
-                    <a href="/about" target="_blank">Maxwell Yao</a>
-                    !
-                </span>
-            </div>
-        
     </div>
-
-    <script async defer>
-      document.addEventListener("copy", function (e) {
-        let toastHTML = '<span>Copied successfully, please follow the reprint policy of this article</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">more</a>';
-        M.toast({html: toastHTML})
-      });
-
-      function navToReprintStatement() {
-        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
-      }
-    </script>
+</div>
 
 
+<script>
+    // 每天切换 banner 图.  Switch banner image every day.
+    var bannerUrl = "/medias/banner/" + new Date().getDay() + '.jpg';
+    $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
+</script>
 
-            <div class="tag_share" style="display: block;">
-                <div class="post-meta__tag-list" style="display: inline-block;">
+
+    </div>
+</div>
+
+<style>
+
+</style>
+
+<main class="content">
+    <div id="tools" class="container chip-container">
+        <div class="card">
+            <div class="card-content">
+                <div class="tag-title center-align">
+                    <i class="fas fa-gears"></i>&nbsp;&nbsp;Tools
+                </div>
+                <article id="friends-link">
                     
-                        <div class="article-tag">
-                            
-                                <a href="/tags/CS/">
-                                    <span class="chip bg-color">CS</span>
-                                </a>
-                            
-                                <a href="/tags/Quantum/">
-                                    <span class="chip bg-color">Quantum</span>
-                                </a>
-                            
+                    
+                    <div class="row tags-posts friend-all">
+                        
+                        
+                        <div class="col s12 m6 l4 friend-div" data-aos="zoom-in-up">
+                            <div class="card frind-card1">
+                                <div class="frind-ship">
+                                    <div class="title">
+                                        <img src="https://gravatar.loli.net/avatar/2e593375b4cb38ba24881c2d8da52e74?d=monsterid&v=1.5.1" alt="img">
+                                        <div>
+                                            <h1 class="friend-name">Chuanmx</h1>
+                                            <p style="position: relative;top: -35px;">Blog of a learning noob from cs THU</p>
+                                        </div>
+                                    </div>
+                                    <div class="friend-button">
+                                        <a href="http://chuanmx.cc/" target="_blank"
+                                            class="button button-glow button-rounded button-caution">
+                                            Visit
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    
-                </div>
-                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
-                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
-<div id="article-share">
-
-    
-    <div class="social-share" data-sites="twitter,facebook,google,linkedin,wechat,qq,qzone" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
-    <script src="/libs/share/js/social-share.min.js"></script>
-    
-
-    
-
-</div>
-
-                </div>
-            </div>
-            
-        </div>
-    </div>
-
-    
-
-    
-
-    
-
-    
-
-    
-        <div class="disqus-card card" data-aos="fade-up">
-    <div id="disqus_thread" class="card-content">
-        <noscript>Please enable JavaScript to view the
-            <a target="_blank" rel="noopener" href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
-        </noscript>
-    </div>
-</div>
-
-<script type="text/javascript">
-    disqus_config = function () {
-        this.page.url = 'http://maxwell297.github.io/qcc-lecture1/';
-        this.page.identifier = '/qcc-lecture1/';
-        this.page.title = 'QCC lecture1';
-    };
-    let disqus_shortname = 'https-maxwell297-github-io';
-
-    (function () { // DON'T EDIT BELOW THIS LINE
-        let d = document, s = d.createElement('script');
-        // 如：s.src = 'https://blinkfox.disqus.com/embed.js';
-        s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', new Date());
-        (d.head || d.body).appendChild(s);
-    })();
-</script>
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-<article id="prenext-posts" class="prev-next articles">
-    <div class="row article-row">
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
-            <div class="card">
-                <a href="/paper-reading-crop/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="Paper reading - CROP">
-                        
-                        <span class="card-title">Paper reading - CROP</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
                         
                     </div>
-                    <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-10-30
-                        </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/Theoretical-RL/" class="post-category">
-                                    Theoretical RL
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
                     
-                    <a href="/tags/CS/">
-                        <span class="chip bg-color">CS</span>
-                    </a>
-                    
-                    <a href="/tags/RL/">
-                        <span class="chip bg-color">RL</span>
-                    </a>
-                    
-                </div>
-                
+                </article>
             </div>
         </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                Next&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/hello-world/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Hello World">
-                        
-                        <span class="card-title">Hello World</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-10-28
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-user fa-fw"></i>
-                            Maxwell Yao
-                            
-                        </span>
-                    </div>
-                </div>
-                
-            </div>
-        </div>
-        
     </div>
-</article>
-
-</div>
-
-
-
-<!-- 代码块功能依赖 -->
-<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
-
-
-  <!-- 是否加载使用自带的 prismjs. -->
-  <script type="text/javascript" src="/libs/prism/prism.min.js"></script>
-
-
-<!-- 代码语言 -->
-
-<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
-
-
-<!-- 代码块复制 -->
-
-<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
-
-
-<!-- 代码块收缩 -->
-
-<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
-
-
-
-    </div>
-    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
-        <div class="toc-widget card" style="background-color: white;">
-            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;TOC</div>
-            <div id="toc-content"></div>
-        </div>
-    </div>
-</div>
-
-<!-- TOC 悬浮按钮. -->
-
-<div id="floating-toc-btn" class="hide-on-med-and-down">
-    <a class="btn-floating btn-large bg-color">
-        <i class="fas fa-list-ul"></i>
-    </a>
-</div>
-
-
-<script src="/libs/tocbot/tocbot.min.js"></script>
-<script>
-    $(function () {
-        tocbot.init({
-            tocSelector: '#toc-content',
-            contentSelector: '#articleContent',
-            headingsOffset: -($(window).height() * 0.4 - 45),
-            collapseDepth: Number('0'),
-            headingSelector: 'h2, h3, h4'
-        });
-
-        // Set scroll toc fixed.
-        let tocHeight = parseInt($(window).height() * 0.4 - 64);
-        let $tocWidget = $('.toc-widget');
-        $(window).scroll(function () {
-            let scroll = $(window).scrollTop();
-            /* add post toc fixed. */
-            if (scroll > tocHeight) {
-                $tocWidget.addClass('toc-fixed');
-            } else {
-                $tocWidget.removeClass('toc-fixed');
-            }
-        });
-
-        
-        /* 修复文章卡片 div 的宽度. */
-        let fixPostCardWidth = function (srcId, targetId) {
-            let srcDiv = $('#' + srcId);
-            if (srcDiv.length === 0) {
-                return;
-            }
-
-            let w = srcDiv.width();
-            if (w >= 450) {
-                w = w + 21;
-            } else if (w >= 350 && w < 450) {
-                w = w + 18;
-            } else if (w >= 300 && w < 350) {
-                w = w + 16;
-            } else {
-                w = w + 14;
-            }
-            $('#' + targetId).width(w);
-        };
-
-        // 切换TOC目录展开收缩的相关操作.
-        const expandedClass = 'expanded';
-        let $tocAside = $('#toc-aside');
-        let $mainContent = $('#main-content');
-        $('#floating-toc-btn .btn-floating').click(function () {
-            if ($tocAside.hasClass(expandedClass)) {
-                $tocAside.removeClass(expandedClass).hide();
-                $mainContent.removeClass('l9');
-            } else {
-                $tocAside.addClass(expandedClass).show();
-                $mainContent.addClass('l9');
-            }
-            fixPostCardWidth('artDetail', 'prenext-posts');
-        });
-        
-    });
-</script>
-
-    
-
 </main>
-
-
-<script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-<script>
-    MathJax.Hub.Config({
-        tex2jax: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
-    });
-</script>
-
-
-<!-- <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script> -->
-
 
     <footer class="page-footer bg-color">
     
